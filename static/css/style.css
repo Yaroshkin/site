@@ -1,1 +1,1791 @@
 
+        body {
+            font-family: 'pf_din_text_comp_pro','Roboto', sans-serif;
+            background-color: #fff;
+        }
+        /*---------------------------*/
+
+        .jumbotron-transparent {
+                margin-top: 2rem;
+                background-size: cover;
+                background-position: center;
+                color: #fff;
+                text-align: center;
+                padding: 4rem;
+        }
+        .card {
+            background-color: transparent;
+            border: none;
+            color: #fff;
+        }
+
+        .card-body {
+            background-color: transparent;
+            color: #fff;
+        }
+
+        /* Стили для input */
+        input[type="name"]::placeholder,
+        input[type="text"]::placeholder,
+        input[type="email"]::placeholder,
+        input[type="tel"]::placeholder {
+            color: grey;
+        }
+
+        textarea#message::placeholder {
+            color: white;
+        }
+        .animated-button {
+            position: relative;
+            overflow: hidden;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .link-animated {
+            display: inline-block;
+            padding: 10px 20px;
+            background-image: linear-gradient(45deg, #42ADE0, #42ADE0, #42ADE0);
+            background-size: 200% 200%;
+            background-position: 0% 50%;
+            transition: background-position 0.6s ease;
+            color: #fff;
+            text-decoration: none;
+            border: None;
+        }
+
+
+        .btn-animated {
+            position: relative;
+            overflow: hidden;
+            border: none;
+            background-image: linear-gradient(45deg, #42ADE0, #42ADE0, #42ADE0);
+            background-size: 200% 200%;
+            background-position: 0% 50%;
+            transition: background-position 0.6s ease;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+        }
+
+        .btn-animated:hover {
+            background-position: 100% 50%;
+        }
+
+        .btn-animated::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(45deg, blue, #42ADE0, #42ADE0);
+            background-size: 200% 200%;
+            background-position: -100% 50%;
+            transition: background-position 0.6s ease;
+            z-index: -1;
+        }
+        /* Ширина полосы прокрутки */
+        ::-webkit-scrollbar {
+          width: 0px;
+        }
+
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+          }
+
+          .popup-content {
+            width: 95%;
+            max-width: 600px;
+            background-color: rgba(240, 251, 255, 1);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+            position: relative; /* Добавляем для позиционирования кнопки закрытия */
+          }
+
+          .popup-content button.close {
+            position: absolute;
+            border-radius: 50%;
+            top: -10px;
+            right: -10px;
+            width: 40px;
+            height: 40px;
+            font-size: 20px;
+            font-weight: bold;
+            background-color: rgba(255, 255, 255, 0.8);
+            color: #000;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+          }
+
+        .popup-content h3 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .popup-content form {
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 4px;
+        }
+
+
+
+        .popup-content .form-group {
+            margin-bottom: 20px;
+        }
+
+        .popup-content label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .popup-content input[type="name"],
+        .popup-content input[type="text"],
+        .popup-content input[type="email"],
+        .popup-content input[type="tel"],
+        .popup-content textarea {
+            width: 100%;
+            padding: 8px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .popup-content textarea {
+            resize: vertical;
+            height: 100px;
+        }
+
+        .popup-content button.btn-animated {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .popup-content button.btn-animated:hover {
+            background-color: #0056b3;
+        }
+        .popup-content textarea::placeholder {
+            color: white;
+        }
+
+        .visit {
+            font-size: 10px; /* Измените размер текста на ваше усмотрение */
+            text-align: right; /* Сдвигаем текст вправо */
+            color: gray;
+        }
+
+        /*-----------------------------*/
+        /* Стили для кнопки меню */
+/* Стили для кнопки меню */
+.menu-btn {
+    background-color:  transparent; /* Цвет кнопки */
+    color: rgb(24, 65, 119); /* Цвет текста кнопки */
+    border: 2px solid #5ca9e3; /* Обводка вокруг кнопки */
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+    margin-right: 15px;
+}
+
+/* Убираем изменение цвета кнопки меню при наведении */
+.menu-btn:hover {
+    background-color: #44a1e8; /* Оставляем тот же цвет */
+    color: rgb(255, 255, 255); /* Цвет текста при наведении */
+}
+
+/* Стили для выпадающего меню */
+.custom-dropdown {
+    background-color: #ededed; /* Цвет фона */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень */
+    border-radius: 20px; /* Закругление углов */
+    padding: 10px 0;
+    
+}
+
+.custom-dropdown .dropdown-item {
+    width: 300px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #656565; /* Цвет текста */
+    border-radius: 20px; /* Закругление углов */
+    transition: background-color 0.2s ease, color 0.2s ease; /* Переход при изменении цвета */
+}
+
+.custom-dropdown .dropdown-item:hover {
+    background-color: #4492ce; /* Цвет фона при наведении */
+    color: white; /* Цвет текста при наведении */
+}
+
+/* Скрываем ссылки в списке на десктопе и показываем их на мобильных устройствах */
+@media (min-width: 992px) {
+    #navbarNav .navbar-nav {
+        display: none;
+    }
+}
+
+@media (max-width: 991px) {
+    .dropdown {
+        display: none; /* Скрываем выпадающее меню на мобильных устройствах */
+    }
+}
+
+        /*--------------------------------*/
+
+        /* Стили для новых блоков и мобильной версии */
+.neolit-bg-button {
+    display: flex;
+    align-items: center;
+    padding: 10px 10px;
+    background-color: transparent;
+    border: 2px solid #5ca9e3; /* Обводка вокруг кнопки */
+    color: #385585;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 16px; /* Размер шрифта */
+    transition: background-color 0.3s ease;
+    white-space: normal; /* Разрешает перенос текста */
+    word-break: break-word; /* Разбивает длинные слова */
+    min-width: 100px;
+    max-width: 100%;
+}
+
+.neolit-bg-button:hover {
+    background-color: #5f9cd8;
+    color: rgb(255, 255, 255); /* Цвет текста при наведении */
+}
+
+/* Контейнер для кнопок */
+.button-container {
+    display: flex;
+    gap: 20px; /* Отступы между кнопками */
+    margin-left: auto; /* Чтобы прижать блок к правой стороне */
+}
+
+/* Отступы для номера телефона */
+.phone-numbers {
+    font-size: 14px;
+    margin-left: 20px; /* Оставляем отступ между кнопками и номером телефона */
+}
+
+.phone-number img {
+    vertical-align: middle;
+    margin-right: 5px; /* Добавлено расстояние между иконкой и текстом */
+}
+
+/* Стили для мобильной версии */
+@media (max-width: 991.98px) {
+    .navbar-nav .nav-link {
+        font-size: 14px; /* Уменьшен размер шрифта для мобильных ссылок */
+    }
+
+    .phone-numbers {
+        display: none; /* Скрыть блоки на мобильных устройствах */
+    }
+    .button-container {
+        display: none; /* Скрыть блок кнопок на мобильных устройствах */
+    }
+}
+
+        /*---------------------------*/
+        
+        .fixed-top {
+          position: fixed;
+          top: 0;
+          right: 0;
+          left: 0;
+        }
+
+        .navbar {
+            margin-top: 0;
+            box-shadow: 0px 4px 10px grey; /* Adjust shadow properties as needed */
+            background-color: rgba(230, 248, 252, 0.7); /* Прозрачность 70% */
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+        }
+        @media (max-width: 400px) {
+          .navbar {
+            background-color: rgba(230, 248, 252, 0.95); /* Прозрачность 70% */
+          }
+        }
+
+
+
+        .navbar-brand img {
+            max-height: 70px;
+        }
+
+        .navbar-nav .nav-link {
+            color: grey;
+            font-size: x-large;
+            font-family: 'Roboto Condensed', sans-serif;
+            font-weight: 700; /* Set font weight to bold */
+            padding: 1rem 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #0056b3;
+        }
+        .navbar-toggler {
+            position: absolute;
+            right: 10%;
+
+        }
+        
+
+        
+        .navbar-nav .nav-item.active .nav-link {
+            background-image: linear-gradient(to right, #001f3f, #004080); /* Тёмно-синие цвета */
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        
+
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        /* Показать элементы с анимацией */
+        .fade-in.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .hero {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            display: flex; /* Добавляем flex-контейнер */
+            flex-direction: column; /* Отображаем элементы в столбце */
+            justify-content: center; /* Выравниваем элементы по центру вертикально */
+            color: white; /* Цвет текста */
+        }
+        /* Add custom CSS here */
+        .navbar {
+            transition: all 0.1ms ease-in-out;
+        }
+        .fixed-top-scroll {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            /*background-color: rgba(255, 255, 255, 0.9);*/
+        }
+
+        .video-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+        #bot1 {
+                margin-top: 2px;
+                border-radius: 50px;
+            }
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero h1 {
+            color: #333;
+            font-size: 2.5rem;
+        }
+
+        .lead {
+            color: #555;
+            font-size: 1.25rem;
+        }
+
+
+        .footer {
+          position: relative;
+          color: black;
+          text-align: center;
+          padding: 20px 0;
+          overflow: hidden; /* Ограничиваем видимую область контейнера */
+        }
+
+        .footer::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          width: 100%;
+          height: 10px; /* Высота светящейся тени */
+          background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)); /* Градиент для светящейся тени */
+          transform: scaleY(2); /* Увеличиваем высоту градиента для более плавного перехода */
+          z-index:10; /* Помещаем тень за содержимое */
+          backdrop-filter: blur(10px)
+        }
+
+
+        .scroll-line {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: #264891;
+            z-index: 9999;
+        }
+
+        .scroll-line-icon {
+            width: 55px;
+            height: 40px;
+            background: url('/static/img/cargoship.png') no-repeat center center;
+            background-size: cover;
+            position: fixed;
+            bottom: 0; /* Adjust to position the icon */
+            opacity: 0; /* Start with no opacity */
+            margin-right: 20px;
+        }
+        .video-youtube {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        @media (max-width: 480px) {
+          .video-youtube {
+            max-width: 90%;
+          }
+        }
+
+
+
+        .video-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .video-youtube iframe {
+            width: 100%; /* Занимает всю ширину контейнера */
+            display: block;
+            margin: 0 auto; /* Центрирует видео по горизонтали */
+        }
+        .vc_column-inner{
+            position: center;
+        }
+        .sc_item_container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #f7f7f7;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .sc_item_image img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .sc_item_text {
+            width: 60%;
+        }
+
+        .sc_item_subtitle {
+            color: #42ADE0;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .sc_item_title {
+            color: #222;
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .sc_item_descr {
+            color: #777;
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .sc_item_button a {
+            display: inline-block;
+            background-color: #42ADE0;
+            color: #fff;
+            font-size: 18px;
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .sc_item_button a:hover {
+            background-color: #2681B8;
+        }
+        .sc_content_container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sc_item_image {
+            margin-bottom: 20px; /* Отступ между картинкой и текстом */
+        }
+
+        .sc_item_image img {
+            max-width: 100%; /* Сделать картинку адаптивной */
+            height: auto;
+        }
+
+        .sc_item_buttons {
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px; /* Отступ перед кнопками */
+        }
+        .socials-new .telegram-bot {
+            display: inline-flex;
+            flex-wrap: wrap;
+            gap: 5.6px;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .socials-new .telegram-bot_wrapper {
+            display: inline-flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .socials-new .telegram-bot_color {
+            color: #43aee1;
+            font-family: Roboto\ Condensed;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 100%;
+        }
+
+        .socials-new .telegram-bot__text {
+            color: #181818;
+            font-family: Roboto\ Condensed;
+            font-size: 11.2px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 100%
+        }
+        .socials-new .custom-html-widget {
+            margin-left: 30%;
+            display: flex;
+            flex-wrap: nowrap;
+            gap: 16px;
+        }
+        .widget-telegram-subscription .telegram-subscription {
+            align-items: center;
+            background-color: #43aee1;
+            border-radius: 39px;
+            color: #fff;
+            display: inline-flex;
+            font-family: Roboto\ Condensed;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            gap: 8px;
+            justify-content: flex-start;
+            line-height: 100%;
+            min-height: 54px;
+            min-width: 236px;
+            padding: 20px 28px;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+        .widget-telegram-subscription .telegram-subscription:before {
+            background-image: url(/static/img/telegram.svg);
+            background-repeat: no-repeat;
+            content: "";
+            display: inline-block;
+            height: 16.5px;
+            width: 16.5px;
+        }
+
+        .language-buttons {
+            display: flex;
+            align-items: center;
+            margin-right: 40px;
+        }
+        .phone-numbers {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 10px;
+            margin-top: 20px; /* Добавляем отступ снизу */
+        }
+
+
+        .language-buttons a {
+            text-decoration: none;
+            color: #000;
+            font-weight: bold; /* Добавляем жирность букв */
+            transition: color 0.3s; /* Добавляем плавный переход цвета */
+        }
+
+        .language-buttons a::before {
+            content: "|"; /* Разделяющий знак */
+            margin: 0 5px;
+            color: #000;
+        }
+
+        .language-buttons a:first-child::before {
+            content: ""; /* Убираем разделяющий знак перед первой ссылкой */
+        }
+
+        .language-buttons a:hover {
+            color: #0056b3; /* Цвет при наведении */
+        }
+        .container-fluid{
+            margin-top: 40px;
+        }
+        .row>* {
+            flex-shrink: 0;
+            max-width: None;
+            padding-right: calc(var(--bs-gutter-x) * .5);
+            padding-left: calc(var(--bs-gutter-x) * .5);
+            margin-top: var(--bs-gutter-y);
+        }
+        /* Стили для контейнера с кнопкой и описанием */
+        .why_col {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: black;
+            transition: color 0.3s;
+            margin-bottom: 20px;
+        }
+
+        .why_col__content {
+            flex: 1;
+        }
+        @media (min-width: 767px) { /* Применять стили только для мобильных устройств шириной до 767px */
+            .col-md-6 {
+                width: 80%;
+            }
+        }
+        @media (max-width: 767px) { /* Применять стили только для мобильных устройств шириной до 767px */
+            .col-md-6 {
+                width: 90%;
+            }
+            .why_col__img {
+                display: none; /* Скрываем изображения */
+            }
+
+            .why_col__content {
+                padding-left: 0; /* Убираем отступ слева, чтобы контент был выровнен под названием */
+            }
+
+            .why_col__name {
+                font-size: x-large;
+                margin-top: 1rem; /* Добавляем небольшой отступ между элементами */
+            }
+        }
+        .row {
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Стили для картинок */
+        .why_col__img {
+            flex: 0 0 auto;
+            margin-right: 10px;
+            transition: transform 0.3s;
+        }
+
+        /* При наведении на картинку */
+        .why_col__img:hover {
+            transform: scale(0.95); /* Немного уменьшаем картинку */
+        }
+        /* Стили для текста под картинкой */
+        .why_col__desc {
+            margin-top: 5px;
+        }
+
+        /* Стили для изменения расположения картинки и текста */
+        .why_col__reverse {
+            flex-direction: row-reverse;
+        }
+        .lazy-load {
+            width: 150px;
+            height: 150px;
+        }
+        .why_col__name {
+            font-size: medium;
+            font-style: revert;
+        }
+        .tgbutt {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            background-image: linear-gradient(45deg, skyblue, #42ADE0, #42ADE0);
+            color: #fff;
+            animation: gradientShift 2s infinite alternate;
+        }
+
+        @keyframes gradientShift {
+            0% {
+                background-position: 0% 50%;
+            }
+            100% {
+                background-position: 100% 50%;
+            }
+        }
+        .tgbutt:hover {
+            background-image: linear-gradient(45deg, #3399CC, #3399CC, #3399CC);
+            color: #fff;
+        }
+        .tgbutt:active {
+            background-image: linear-gradient(45deg, #267799, #267799, #267799);
+            color: #fff;
+            transform: translateY(1px);
+        }
+        .home-consultation {
+            padding: 150px 0;
+            position: relative;
+            z-index: 4;
+            margin: 0 auto; /* Добавляем этот стиль для выравнивания по центру */
+            max-width: 1200px; /* Ограничиваем максимальную ширину блока */
+        }
+        .home-consultation__row {
+            display: flex;
+            margin-top: 10px;
+            margin-bottom: 30px;
+            align-items: center;
+            justify-content: center; /* Изменяем значение на "center" для центрирования */
+        }
+        .home-consultation__text {
+            max-width: 650px;
+            width: 95%;
+            border-radius: 30px;
+            text-align: center; /* Выравниваем текст по центру */
+            background-color: rgba(230, 245, 255, 0.5);;
+        }
+
+        .home-consultation__text__form {
+            margin-top: 10px;
+            display: flex;
+            flex-direction: column; /* Изменяем направление на "column" для вертикального размещения полей */
+            align-items: center; /* Выравниваем элементы по центру */
+            margin-top: 20px; /* Добавляем небольшой отступ сверху */
+        }
+
+        /* Стили для элементов ввода */
+        .home-consultation__text__form input {
+            flex: 1; /* Равномерно распределяем доступное пространство */
+            max-width: 100%;
+            margin-right: 15px;
+            margin-left: 15px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            background: none;
+            color: #2e2e2e;
+            font-size: 18px;
+            padding: 10px 15px;
+            border-radius: 5px;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        /* Стили для кнопки */
+        .home-consultation__text__form button {
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            background: linear-gradient(45deg, #3399CC, #3399CC, #3399CC);
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            outline: none;
+        }
+
+        /* Добавляем стили при наведении на кнопку */
+        .home-consultation__text__form button:hover {
+            background: linear-gradient(45deg, #3388AA, #3399CC, #33AAEE);
+        }
+
+        /* Используем flex-контейнер для размещения полей ввода на одной строке */
+        .home-consultation__text__form {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
+        .colinp {
+            width: 42%;
+        }
+        @media (max-width: 767px) { /* Применять стили только для мобильных устройств шириной до 767px */
+            .colinp {
+                width: 80%;
+            }
+        }
+        #menu-footer-right-menu-ru {
+            list-style-type: none; /* Убираем маркеры */
+            padding-left: 0; /* Убираем отступы */
+        }
+
+        #menu-footer-right-menu-ru li {
+            margin-bottom: 10px; /* Отступ между пунктами */
+        }
+
+        #menu-footer-right-menu-ru li a {
+            color: white; /* Изменяем цвет ссылок */
+            text-decoration: none; /* Убираем подчеркивание */
+        }
+
+        #menu-footer-right-menu-ru li a:hover {
+            text-decoration: underline; /* Подчеркивание при наведении */
+        }
+
+        @media (max-width: 1100px) {
+            #bot2 {
+                display: none;
+            }
+        }
+
+        .rngst_phone_button {
+            position: fixed;
+            bottom: calc(5% - 3.75px);
+            right: calc(96% - 72px);
+            display: block;
+            height: 150px;
+            width: 150px;
+            margin-bottom: 25px;
+            margin-right: 2px;
+            -webkit-backface-visibility: hidden;
+            -webkit-transform: translateZ(0);
+            opacity: .8;
+            -webkit-transition: all .3s ease-in-out;
+            -moz-transition: all .3s ease-in-out;
+            -ms-transition: all .3s ease-in-out;
+            -o-transition: all .3s ease-in-out;
+            transition: all .3s ease-in-out;
+            z-index: 999990!important;
+            transform-origin: 50% 50% 0
+        }
+        .rngst_phone_button:hover .rngst_phone_icon {
+            -webkittext-shadow: 0 0 12px rgba(255,255,255,1);
+            -moz-text-shadow: 0 0 12px rgba(255,255,255,1);
+            -ms-text-shadow: 0 0 12px rgba(255,255,255,1);
+            -o-text-shadow: 0 0 12px rgba(255,255,255,1);
+            text-shadow: 0 0 12px rgba(255,255,255,1)
+        }
+
+        .rngst_phone_fill {
+            height: 120px;
+            width: 120px;
+            background: #17a1cc;
+            border-radius: 50%;
+            position: absolute;
+            top: 40px;
+            left: 40px;
+            z-index: 999991;
+            -webkit-animation: ringostat_pulse 2.5s infinite ease-in-out;
+            -moz-animation: ringostat_pulse 2.5s infinite ease-in-out;
+            -ms-animation: ringostat_pulse 2.5s infinite ease-in-out;
+            -o-animation: ringostat_pulse 2.5s infinite ease-in-out;
+            animation: ringostat_pulse 2.5s infinite ease-in-out;
+            transform-origin: 50% 50% 0
+        }
+
+
+        .rngst_phone_icon {
+            cursor: pointer;
+            width: 60px;
+            height: 60px;
+            top: 70px;
+            left: 70px;
+            position: absolute;
+            background-image: url('/static/img/phone_icon.png');
+            background-position: center center;
+            background-repeat: no-repeat;
+            z-index: 999993;
+            transform-origin: 50% 50% 0
+        }
+
+
+        .rngst_phone_body {
+            height: 60px;
+            width: 60px;
+            position: absolute;
+            left: 70px;
+            top: 70px;
+            border-radius: 50%;
+            z-index: 999992;
+            box-shadow: 0 0 0 15px rgba(70,171,84,0);
+            -webkit-box-shadow: 0 0 0 15px rgba(70,171,84,0);
+            -moz-box-shadow: 0 0 0 15px rgba(70,171,84,0);
+            -ms-box-shadow: 0 0 0 15px rgba(70,171,84,0);
+            -o-box-shadow: 0 0 0 15px rgba(70,171,84,0);
+            box-shadow: 0 0 0 15px rgba(70,171,84,0);
+            -webkit-transition: box-shadow .8s ease-in-out;
+            -moz-transition: box-shadow .8s ease-in-out;
+            -ms-transition: box-shadow .8s ease-in-out;
+            -o-transition: box-shadow .8s ease-in-out;
+            transition: box-shadow .8s ease-in-out;
+            background: #17a1cc;
+            transform-origin: 50% 50% 0
+        }
+
+        .rngst_phone_circle {
+            background: #17a1cc;
+            height: 70px;
+            width: 70px;
+            position: absolute;
+            left: 65px;
+            top: 65px;
+            z-index: 999991;
+            border: 1px solid #17a1cc;
+            border-radius: 50%;
+            -webkit-animation: ringostat_pulse2 2.5s infinite ease-in-out;
+            -moz-animation: ringostat_pulse2 2.5s infinite ease-in-out;
+            -ms-animation: ringostat_pulse2 2.5s infinite ease-in-out;
+            -o-animation: ringostat_pulse2 2.5s infinite ease-in-out;
+            animation: ringostat_pulse2 2.5s infinite ease-in-out;
+            transform-origin: 50% 50% 0
+        }
+        .rngst_phone_circle2 {
+            background: #17a1cc;
+            transform-origin: 50% 50% 0
+        }
+        @-webkit-keyframes ringostat_pulse {
+            0% {
+                -webkit-transform: scale(0.5);
+                opacity: .3
+            }
+
+            50% {
+                -webkit-transform: scale(0.7);
+                opacity: .2
+            }
+
+            100% {
+                -webkit-transform: scale(0.5);
+                opacity: 0
+            }
+        }
+
+        @-moz-keyframes ringostat_pulse {
+            0% {
+                -moz-transform: scale(0.5);
+                opacity: .3
+            }
+
+            50% {
+                -moz-transform: scale(0.7);
+                opacity: .2
+            }
+
+            100% {
+                -moz-transform: scale(0.5);
+                opacity: 0
+            }
+        }
+
+        @-o-keyframes ringostat_pulse {
+            0% {
+                -o-transform: scale(0.5);
+                opacity: .3
+            }
+
+            50% {
+                -o-transform: scale(0.7);
+                opacity: .2
+            }
+
+            100% {
+                -o-transform: scale(0.5);
+                opacity: 0
+            }
+        }
+
+        @-ms-keyframes ringostat_pulse {
+            0% {
+                -ms-transform: scale(0.5);
+                opacity: .3
+            }
+
+            50% {
+                -ms-transform: scale(0.7);
+                opacity: .2
+            }
+
+            100% {
+                -ms-transform: scale(0.5);
+                opacity: 0
+            }
+        }
+
+        @keyframes ringostat_pulse {
+            0% {
+                transform: scale(0.5);
+                opacity: .3
+            }
+
+            50% {
+                transform: scale(0.7);
+                opacity: .2
+            }
+
+            100% {
+                transform: scale(0.5);
+                opacity: 0
+            }
+        }
+
+        @-webkit-keyframes ringostat_pulse2 {
+            0% {
+                -webkit-transform: scale(2);
+                opacity: 0
+            }
+
+            100% {
+                -webkit-transform: scale(0.6);
+                opacity: .8
+            }
+        }
+
+        @-moz-keyframes ringostat_pulse2 {
+            0% {
+                -moz-transform: scale(2);
+                opacity: 0
+            }
+
+            100% {
+                -moz-transform: scale(0.6);
+                opacity: .8
+            }
+        }
+
+        @-o-keyframes ringostat_pulse2 {
+            0% {
+                -o-transform: scale(2);
+                opacity: 0
+            }
+
+            100% {
+                -o-transform: scale(0.6);
+                opacity: .8
+            }
+        }
+
+        @-ms-keyframes ringostat_pulse2 {
+            0% {
+                -ms-transform: scale(2);
+                opacity: 0
+            }
+
+            100% {
+                -ms-transform: scale(0.6);
+                opacity: .8
+            }
+        }
+
+        @keyframes ringostat_pulse2 {
+            0% {
+                transform: scale(2);
+                opacity: 0
+            }
+
+            100% {
+                transform: scale(0.6);
+                opacity: .8
+            }
+        }
+        /* Общие стили */
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.popup {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* Дополнительные стили по вашему усмотрению */
+.contact-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .section {
+    margin-bottom: 20px;
+  }
+  .section-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  .contact-details {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+
+
+        .highlight {
+            font-weight: bold;
+            color: #264891;
+        }
+
+        .section {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            color: #264891;
+        }
+
+         /* Custom styles for contact info */
+        .contact-info-con {
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .contact-info-section {
+            flex: 1;
+            padding: 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            margin: 20px 10px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #264891;
+        }
+
+        .address {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .phone, .email, .contact-person {
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+
+        /* Custom styles for sections */
+          .container-contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        }
+        .section {
+            width: 80%;
+            margin: 20px 0;
+            text-align: left;
+        }
+        .highlight {
+            background-color: #f0f0f0;
+            padding: 2px 5px;
+        }
+        .statistics-section ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        .invite-section p {
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .statistics-section {
+            background-color: #f5f5f5;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .statistics-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .statistics-list li {
+            font-size: 16px;
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #264891;
+        }
+        /* Добавьте следующие стили в ваш файл CSS */
+        .custom-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .custom-section {
+            margin-bottom: 40px;
+        }
+
+        .custom-section-title {
+            text-align: center;
+            font-size: 34px;
+            margin-bottom: 20px;
+        }
+
+        .custom-services-grid,
+        .custom-additional-services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .custom-service-item,
+        .custom-additional-service-item {
+            text-align: center;
+            padding: 20px;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+        }
+
+        .custom-service-item img,
+        .custom-additional-service-item img {
+            max-width: 200px; /* Увеличьте значение здесь */
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .custom-services-grid,
+            .custom-additional-services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+       /* Стиль для контейнера Swiper */
+.swiper-container {
+    width: 100%;
+    height: auto;
+    padding: 0 10px; /* Уменьшение отступов для мобильных устройств */
+    box-sizing: border-box;
+    position: relative;
+}
+
+/* Видео внутри слайда */
+.swiper-slide {
+    height: 200px;
+    box-sizing: border-box;
+    padding: 0 5px; /* Уменьшение отступов внутри слайда */
+}
+
+.video-youtube iframe {
+    width: 100%;
+    height: auto;
+    max-width: 100%; /* Ограничение ширины видео */
+    max-height: 200px; /* Высота видео */
+    border: none;
+}
+
+/* Контейнер для стрелок навигации */
+.swiper-buttons {
+    position: absolute; /* Абсолютное позиционирование */
+    top: 10px; /* Расположение стрелок сверху */
+    width: 100%; /* Ширина на всю ширину контейнера */
+    display: flex; /* Выравнивание стрелок по горизонтали */
+    justify-content: space-between; /* Равномерное распределение стрелок по краям */
+    padding: 0 10px; /* Отступы от краев контейнера */
+    z-index: 1000; /* Убедитесь, что стрелки находятся поверх слайдов */
+}
+
+/* Стили для стрелок навигации */
+.swiper-button-prev, .swiper-button-next {
+    background-color: transparent; /* Прозрачный фон */
+    border: none; /* Убираем границы */
+    font-size: 30px; /* Увеличим размер стрелок */
+    color: #929191; /* Темно-серый цвет для стрелок */
+    width: 40px; /* Размер кнопок */
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+
+/* Показ стрелок при наведении на контейнер Swiper */
+.swiper-container:hover .swiper-button-prev,
+.swiper-container:hover .swiper-button-next {
+    opacity: 1; /* Сделать стрелки видимыми при наведении */
+}
+
+/* Стиль для заголовка */
+.reviews-title {
+    text-align: center; /* Центрируем текст */
+    font-size: 24px; /* Размер шрифта */
+    font-weight: bold;
+    margin-bottom: 20px; /* Отступ снизу */
+    margin-top: 20px;
+}
+
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .swiper-container {
+        padding: 0 5px; /* Уменьшить отступы на мобильных устройствах */
+    }
+
+    .video-youtube iframe {
+        max-width: 100%;
+        max-height: 150px; /* Высота видео на мобильных устройствах */
+    }
+}
+
+
+        .form-container {
+            display: flex;
+            justify-content: space-between;
+            background-color: #ffffff;
+            padding: 40px;
+            max-width: 1150px;
+            margin: 40px auto;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .info-block {
+            background-color: white;
+            padding: 20px;
+        }
+        
+        .info-block h1 {
+            color: rgb(20, 20, 20);
+            font-size: 2em;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        
+        .info-block p {
+            color: rgb(15, 15, 15);
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+        
+        
+        .form-block {
+            flex: 1;
+            max-width: 400px;
+        }
+        
+        .form-block h3 {
+            color: rgb(39, 41, 42);
+            font-size: x-large;
+            margin-bottom: 20px;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        .form-group label {
+            color: rgb(18, 18, 19);
+        }
+        
+        .input-group {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        
+        .btn-primary {
+            background-color: rgb(35, 35, 124);
+            color: #fff;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .btn-primary:hover {
+            background-color: rgba(48, 82, 116, 0.8);
+        }
+        
+        /* Адаптивный дизайн для мобильных устройств */
+        @media (max-width: 768px) {
+            .form-container {
+                flex-direction: column;
+                padding: 20px;
+            }
+        
+            .info-block, .form-block {
+                max-width: 100%;
+                padding-right: 0;
+            }
+        
+            .form-block {
+                margin-top: 20px;
+            }
+        }
+
+        .container1 {
+            width: 100%;
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        .partner-section {
+            padding: 20px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        
+        .trust-block {
+            background-color: #ffffff; /* Белый фон для блока с текстом */
+            padding: 20px;
+            border-radius: 20px; /* Более сильное закругление углов */
+            text-align: center;
+            flex-shrink: 0; /* Не сжимается */
+            width: 200px; /* Ширина блока с текстом */
+            height: 400px; /* Высота блока с текстом, чтобы он выглядел пропорционально */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень для блока */
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end; /* Выравнивание текста по нижнему краю */
+        }
+        
+        .partner-logo {
+           
+            height: auto; /* Высота подстраивается автоматически */
+            margin-bottom: 50%; /* Отступ снизу для отделения от текста */
+        }
+
+        .trust-block h2 {
+            margin: 0;
+            color: #333;
+            font-size: 1.5rem; /* Размер шрифта для заголовка */
+        }
+        
+        .trust-block span {
+            display: block;
+            font-size: 1.5rem;
+            color: #555;
+        }
+        
+        .logo-block {
+            flex-grow: 1; /* Заполняет оставшееся пространство */
+            margin-left: 20px;
+        }
+        
+        .logo-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Автоматическая адаптация колонок */
+            gap: 20px; /* Отступы между логотипами */
+        }
+        
+        .logo-item {
+            background-color: #ffffff; /* Белый фон для каждого логотипа */
+            border-radius: 10px; /* Скругление углов */
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень для логотипов */
+        }
+        
+        .logo-item img {
+            max-width: 100%;
+            max-height: 100px; /* Высота логотипов, чтобы они не были слишком большими */
+            object-fit: contain;
+        }
+        
+        /* Адаптивные стили */
+        @media (max-width: 768px) {
+            .partner-section {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        
+            .trust-block {
+                width: 100%;
+                height: 30%;
+                margin-bottom: 20px;
+            }
+        
+            .logo-block {
+                margin-left: 0;
+            }
+        
+            .logo-container {
+                grid-template-columns: repeat(auto-fit, minmax(50px, 1fr)); /* Меньшие колонки на маленьких экранах */
+                gap: 5px;
+            }
+        
+            .logo-item img {
+                height: 40px; /* Размер логотипов на маленьких экранах */
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .logo-container {
+                grid-template-columns: 1fr; /* 1 колонка на самых маленьких экранах */
+                gap: 10px;
+            }
+        
+            .logo-item img {
+                height: 40px; /* Размер логотипов на самых маленьких экранах */
+            }
+        }
+
+        .footer-menu {
+            display: flex;
+            flex-direction: column; /* Размещаем ссылки вертикально */
+            align-items: flex-start; /* Выравнивание ссылок по левому краю */
+        }
+        
+        .footer-menu a {
+            width: 180px;
+            margin-bottom: 2px; /* Отступы между ссылками */
+            color: #2c2c2c; /* Цвет текста */
+            text-decoration: none; /* Убираем подчеркивание */
+            font-size: 16px; /* Размер шрифта */
+            padding: 5px 10px; /* Добавляем отступы внутри обводки */
+            border: 1px solid #ffffff; /* Добавляем обводку */
+            border-radius: 35px; /* Закругляем углы */
+            transition: color 0.3s ease, border-color 0.3s ease; /* Плавный переход цвета и обводки */
+           
+        }
+        
+        .footer-menu a:hover {
+            color: #f7f9fa; /* Цвет текста при наведении */
+            background-color: #4492ce; /* Цвет обводки при наведении */
+        }
+        
+
+        .contact-form {
+            margin-top: 20px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень для формы */
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+            /* Фон и закругление углов уже задано через inline-стиль */
+        }
+
+        /* Стили для контейнера формы */
+.form-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px; /* Расстояние между блоками */
+    flex-wrap: wrap; /* Элементы будут переноситься на новую строку при необходимости */
+}
+
+/* Стили для блока с изображением и текстом */
+/* Стили для блока с текстом и изображением */
+.info-block {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px; /* Расстояние между изображением и текстом */
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.8); /* Полупрозрачный белый фон */
+    border-radius: 30px; /* Закругление углов */
+    padding: 20px; /* Внутренние отступы */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень для блока */
+}
+
+.info-image {
+    max-width: 200px;
+    border-radius: 50px;
+}
+
+.info-text {
+    flex: 1;
+    width: 300px;
+}
+
+.info-text h3 {
+    margin: 15%;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.info-text p {
+    text-align: le;
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+
+/* Стили для формы */
+.form-block-contact {
+    flex: 1;   
+    padding: 30px;
+}
+
+/* Стили для полей формы */
+.form-group {
+    margin-bottom: 15px; /* Отступ между полями */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px; /* Отступ снизу для метки */
+    font-weight: bold;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border-radius: 15px;
+    border: 1px solid #ccc; /* Рамка вокруг поля */
+    box-sizing: border-box; /* Включаем отступы и рамки в ширину элемента */
+}
+
+.form-control:focus {
+    border-color: #4492ce; /* Цвет рамки при фокусе */
+    outline: none; /* Убираем стандартный контур при фокусе */
+}
+
+.required {
+    color: red; /* Цвет для обязательных полей */
+}
+
+.btn-primary {
+    background-color: #4492ce; /* Цвет фона кнопки */
+    color: white; /* Цвет текста на кнопке */
+    border: none; /* Убираем рамку */
+    padding: 10px 20px;
+    border-radius: 15px;
+    font-size: 20px;
+    cursor: pointer; /* Указатель курсора */
+    transition: background-color 0.3s ease; /* Переход при наведении */
+}
+
+.btn-primary:hover {
+    background-color: #327bbf; /* Цвет фона кнопки при наведении */
+}
+
+/* Стили для модального окна */
+.modal {
+    display: none; /* Скрыть модальное окно по умолчанию */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Стили для содержимого модального окна */
+.modal-content {
+    position: relative; /* Добавлено для позиционирования закрытия */
+    background-color: #fefefe;
+    margin: 5% auto; /* Меньше отступ для улучшения центрирования */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 900px; /* Ограничение максимальной ширины */
+}
+
+/* Стили для кнопки закрытия модального окна */
+.close {
+    color: #aaa;
+    position: absolute; /* Изменено на absolute */
+    top: -10px; /* Отступ от верхнего края */
+    right: 10px; /* Отступ от правого края */
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+}
+
+        
+        
