@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TKHMGXN6');</script>
+<!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}
+	{% endblock %}
+    <link style="border-radius: 60%" rel="shortcut icon" href="/static/icon.jpg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/static/css/style.css">
+
+</head>
+<nav class="navbar navbar-expand-lg navbar-light" style="padding: 0px 0;">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center">
+            <a class="navbar-brand" href="/">
+                <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" style="max-height: 50px;">
+            </a>
+            <div class="language-buttons">
+                <a href="/" id="btn-ua">UA</a>
+                <a href="{{ url_for('index_ru') }}" id="btn-ru">RU</a>
+            </div>
+            <!-- Custom Menu Button for Desktop -->
+            <div class="dropdown d-none d-lg-block">
+                <button class="btn menu-btn dropdown-toggle" type="button" id="desktopMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                    Меню
+                </button>
+                <ul class="dropdown-menu custom-dropdown" aria-labelledby="desktopMenuButton">
+                    <li><a class="dropdown-item" href="/ru">Главная</a></li>
+                    <li><a class="dropdown-item" href="/ru/our">Наши услуги</a></li>
+                    <li><a class="dropdown-item" href="/ru/about">О нас</a></li>
+                    <li><a class="dropdown-item" href="/ru/impos">Важно</a></li>
+                </ul>
+            </div>
+            
+            <!-- Standard Mobile Menu Button -->
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>Меню
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            
+            <ul class="navbar-nav ml-auto d-lg-none">
+                <li class="nav-item">
+                    <a class="nav-link" style="color: #264891" href="/ru">Главная</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/ru/our">Наши услуги</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/ru/about">О нас</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/ru/impos">Важное</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/ru/impos">Отследить груз</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/impos">Калькулятор стоимости</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/impos">Связаться с нами</a>
+                </li>
+            </ul>
+            <div class="button-container">
+                <div class="neolit-bg-button neolit-fade">
+                    <a href="https://t.me/your_telegram_bot" target="_blank" class="flex-1" style="text-decoration: none; color: #385585">Отследить груз</a>
+                </div>
+                <div onclick="openPopup('pop-up-track')" class="neolit-bg-button neolit-fade">
+                    <span class="flex-1">Калькулятор стоимости</span>
+                </div>
+                <div onclick="scrollToForm2()" class="neolit-bg-button neolit-fade">
+                    <span class="flex-1">Связаться с нами</span>
+                </div>
+            </div>
+            <div class="phone-numbers">
+                <div class="working-hours" style="text-align: right; font-size: 12px; color: #888;">
+                    Пн-Пт: 9:00 - 18:00
+                </div>
+                <div class="phone-number">
+                    <a href="tel:+380503233123" style="text-decoration: none; color: black;">
+                        <img src="/static/img/mtc.png" alt="Phone Icon"> +38(050)-3233-123
+                    </a>
+                </div>
+            </div>
+    </div>
+</nav>
+
+	{% block content %}
+	{% endblock %}
+    <footer class="footer">
+        <div class="container">
+            <div class="row" style="margin-top: 40px">
+                <!-- 1. Соцсети и подписка -->
+                <div class="col-xs-12 col-md-3 text-center to_animate animated fadeInUp" data-animation="fadeInUp">
+                    <div id="aircool_icons_list-2" class="widget-odd widget-first widget-1 footer_list widget widget_icons_list">
+                        <div class="widget-icons-list no-bullets no-top-border no-bottom-border">
+                            <div class="media small-teaser inline-block margin_0">
+                                <div class="media-body"></div>
+                            </div>
+                            <div class="media small-teaser inline-block margin_0"></div>
+                            <div class="media small-teaser inline-block margin_0"><span style="display: none;">4</span></div>
+                            <div class="media small-teaser inline-block margin_0" style="margin-bottom: 20px;">
+                                <div class="media-body">
+                                    <div class="navbar-brand mr-3" href="">
+                                        <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="custom_html-2" class="widget_text widget-even widget-2 socials-new widget widget_custom_html">
+                        <div class="textwidget custom-html-widget">
+                            <a rel="nofollow noopener noreferrer" href="https://www.instagram.com/aspor_logistic/" target="_blank" class="new-socials-icon instagram">
+                                <img alt="instagram" width="28" height="28" src="/static/img/instagram.svg">
+                            </a>
+                            <a rel="nofollow noopener noreferrer" href="https://t.me/AsporCheckBot" target="_blank" class="new-socials-icon telegram-bot">
+                                <img alt="telegram-bot" width="28" height="28" class="telegram-bot__img" src="/static/img/telegram-bot.svg">
+                                <p class="telegram-bot_wrapper">
+                                    <span class="telegram-bot_color">Чат-бот</span>
+                                    <span class="telegram-bot__text">Отследить груз</span>
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                    <div id="aircoolchild_telegramsubscription-2" class="widget-odd widget-last widget-3 widget widget_socials">
+                        <div class="widget-telegram-subscription no-bullets no-top-border no-bottom-border topmargin_30 ">
+                            <a rel="nofollow" href="https://t.me/AsporLogistic" target="_blank" class="social-icon telegram-subscription fontsize_12 rounded-icon">
+                                Подписаться на нашу группу
+                            </a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- 2. Новый столбик - Меню -->
+                <div class="col-xs-12 col-md-3 text-center to_animate animated fadeInUp" data-animation="fadeInUp">
+                    <div class="footer-menu">
+                        <a class="dropdown-item" href="/ru">Главная</a>
+                        <a class="dropdown-item" href="/ru/our">Наши услуги</a>
+                        <a class="dropdown-item" href="/ru/about">О нас</a>
+                        <a class="dropdown-item" href="/ru/impos">Важное</a>
+                    </div>
+                </div>
+                
+    
+                <!-- 3. Адрес Одессы -->
+                <div class="col-xs-12 col-md-3 text-center to_animate animated fadeInUp" data-animation="fadeInUp">
+                    <div class="contact-column">
+                        <p class="address">🏦 Одеса<br>м. Одеса, Грецька площа 3/4, ТЦ Афіна, офіс 146А</p>
+                        <p class="phone"><a href="tel:+380503233123" style="text-decoration: none; color: black;">📱 +38(050)-3233-123</a><br><a href="email:logistic-ua@aspor.ua"style="text-decoration: none; color: black;">📧 logistic-ua@aspor.ua</a></p>
+                    </div>
+                </div>
+    
+                <!-- 4. Адрес Китая -->
+                <div class="col-xs-12 col-md-3 text-center to_animate animated fadeInUp" data-animation="fadeInUp">
+                    <div class="contact-column">
+                        <p class="address">🏦 Foshan City, China<br>Address: No.602, 6th Floor, Longtai Building, No. 91 Suiyan Road, Yanbu , Nanhai District</p>
+                        <p class="phone"><a href="tel:1353353456"style="text-decoration: none; color: black;">📱 135 3335 3456<br><a href="email:Kosja602@163.com" style="text-decoration: none; color: black;">📧 Kosja602@163.com</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    
+        <!-- Copyright -->
+        <div id="text-6" style="margin-top: 25px" class="widget-even widget-2 footer-copyright widget widget_text">
+            <div class="textwidget">
+                <p>AsporLogistic – доставка грузов из Китая в Украину, &copy; <span id="current-year"></span></p>
+            </div>
+        </div>
+    
+        <!-- Scroll line -->
+        <div class="scroll-line">
+            <div class="scroll-line-icon"></div>
+        </div>
+    </footer>
+    
+    <div class="popup-overlay" id="popup1">
+        <div class="popup-content">
+            <h2 style="margin-top: 10px">Безкоштовна консультація</h2>
+            <p style="margin: auto">Фахівці ASPOR Logistic завжди готові відповісти на всі ваші питання, забезпечити зручний та надійний процес перевезення вантажу.</p>
+            <form data-page="home" data-action="calculation" class="home-consultation__text__form">
+                <div class="input-wrapper">
+                    <input class="colinp" type="text" id="name" name="name" placeholder="Ім'я" data-siid="si_input_8">
+                    <input class="colinp" type="text" id="phone" name="phone" placeholder="Номер телефону" data-siid="si_input_9">
+                </div>
+                <button style="margin-bottom: 10px;" class="button button--primary" onclick="submitPopupForm1()">Зв'язатися</button>
+            </form>
+        <button class="close" onclick="closePopup1()">&times;</button>
+        </div>
+    </div>
+        <div class="popup-overlay" id="popup">
+            <div class="popup-content">
+                <h3 style="color: steelblue; font-size: x-large; font-style: initial">Узнайте стоимость доставкии</h3>
+                <form id="popup-form">
+                     <div class="form-group">
+                        <label style="color: rgba(68, 94, 163, 1)" for="popup-name">Категория товара</label>
+                            <select class="form-control" id="popup-name" name="popup-category">
+                               <option value="Електротовари" selected="selected">Электротовари, мобильные аксессуары </option>
+                                <option value="Обладнання">Оборудование, станки </option>
+                                <option value="Текстиль">Текстиль, обувь </option>
+                                <option value="Авто / вело">Авто / вело / мото запчасти </option>
+                                <option value="Товари госп. признач.">Товари хозяйственного назначения </option>
+                                <option value="Тканини">Ткани</option>
+                                <option value="Інше">Другое </option>
+                            </select>
+                    </div>
+                    <div class="form-group">
+                        <label style="color: rgba(68, 94, 163, 1)" id="popup-message" for="popup-message">Вес и объем (с упаковкой)</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="kg-input" name="kg-input" placeholder="кг" style="max-width: 100px;">
+                            <div class="input-group-append">
+                                <span class="input-group-text" id="divider">/</span>
+                            </div>
+                            <input type="text" class="form-control" id="m3-input" name="m3-input" placeholder="м³" style="max-width: 100px;">
+                        </div>
+                    <div class="form-group">
+                        <label style="color: rgba(68, 94, 163, 1)" for="popup-phone">Телефон</label>
+                        <input type="tel" class="form-control" id="popup-phone" name="popup-phone" inputmode="tel" placeholder="+380"
+                        autocomplete="tel" pattern="\+380[0-9]{9}">
+                    </div>
+                    <div class="form-group">
+                        <label style="color: rgba(68, 94, 163, 1)" for="popup-email">Email</label>
+                        <input type="email" class="form-control" id="popup-email" name="popup-email" placeholder="mailname@mail.com">
+                    </div>
+                    <div class="form-group">
+                        <button type="button" class="btn btn-primary btn-animated" onclick="submitPopupForm()">Отправить</button>
+                    </div>
+                </form>
+                <button class="close" onclick="closePopup()">&times;</button>
+            </div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<script>
+   // Add a scroll event listener to the window
+        var navbar = document.querySelector('.navbar');
+
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 5) {
+                navbar.classList.add('fixed-top-scroll');
+            } else {
+                navbar.classList.remove('fixed-top-scroll');
+            }
+        });
+</script>
+<script>
+    // JavaScript for smooth scrolling and language switch
+    document.addEventListener("DOMContentLoaded", function () {
+        let navHeight = document.querySelector(".navbar").offsetHeight;
+
+        let headerText = document.querySelector(".nav-container p");
+
+        document.addEventListener("scroll", function () {
+            let scrollPosition = window.scrollY;
+
+            if (scrollPosition > navHeight) {
+                headerText.style.opacity = "0";
+                headerText.style.transition = "opacity 0.5s ease-out";
+            } else {
+                headerText.style.opacity = "1";
+                headerText.style.transition = "opacity 0.5s ease-in";
+            }
+        });
+
+        // Language switch functionality
+        let langUkr = document.getElementById("langUkr");
+        let langRus = document.getElementById("langRus");
+
+        langUkr.addEventListener("click", function () {
+            // Code to switch to Ukrainian language
+        });
+
+        langRus.addEventListener("click", function () {
+            // Code to switch to Russian language
+        });
+    });
+</script>
+<script>
+    document.addEventListener("scroll", function () {
+        const scrollLine = document.querySelector(".scroll-line");
+        const scrollLineIcon = document.querySelector(".scroll-line-icon");
+        const scrollPercentage = (window.scrollY / (document.body.offsetHeight - window.innerHeight)) * 100;
+
+        scrollLine.style.width = `${scrollPercentage}%`;
+        scrollLineIcon.style.left = `${scrollPercentage}%`;
+        scrollLineIcon.style.opacity = 1; // Show the icon
+
+        // Apply a transform to move the icon with the scroll line
+        scrollLineIcon.style.transform = `translateX(-${scrollPercentage}+10%)`;
+    });
+</script>
+<script src="{{ url_for('static', filename='js/myjs.js') }}"></script>
+<script>
+    // Обработчик события при прокрутке страницы
+    function fadeInOnScroll() {
+        const fadeIns = document.querySelectorAll(".fade-in");
+
+        fadeIns.forEach(element => {
+            const elementTop = element.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+
+            if (elementTop < windowHeight * 0.85) {
+                element.classList.add("show");
+            }
+        });
+    }
+
+    // Вызов функции при прокрутке
+    window.addEventListener("scroll", fadeInOnScroll);
+    // Вызов функции при загрузке страницы
+    window.addEventListener("DOMContentLoaded", fadeInOnScroll);
+</script>
+</body>
