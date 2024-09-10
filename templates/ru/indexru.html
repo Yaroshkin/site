@@ -1,0 +1,306 @@
+{% extends "/home/baseru.html" %}
+{% block title %}
+    <title>ASPOR Logistic</title>
+<meta name="robots" content="INDEX, FOLLOW">
+<link rel="canonical" href="https://asporlogistic.com.ua/ru/">
+<link rel="alternate" hreflang="ru" href="https://asporlogistic.com.ua/ru/">
+<link rel="alternate" hreflang="uk" href="https://asporlogistic.com.ua/">
+{% endblock %}
+{% block content %}
+<div class="hero">
+    <div class="video-container">
+        <video id="myVideo" autoplay playsinline muted loop>
+            <source src="{{ url_for('static', filename='video.mp4') }}" type="video/mp4">
+            Your browser does not support the video.
+        </video>
+    </div>
+        <div class="container">
+            <h1 style="color: whitesmoke; font-size: 46px!important; line-height: 49px!important; text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.9);"
+                class="display-4">Доставка груза<br>из Китая в Украину</h1>
+            <p style="text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.9);font-size: 20px" class="m-0 d-none d-lg-block ml-3">45-60 дней, тариф от
+                350$</p>
+            <a id="bot1" class="btn btn-lg link-animated" href="javascript:void(0)" onclick="scrollToForm1()" >Узнать стоимость</a>
+            <a id="openModalBtn" class="btn btn-lg link-animated" href="javascript:void(0)" style="border-radius: 50px; display: inline-flex; align-items: center; justify-content: center; gap: 10px;">
+                <img src="/static/img/video-lesson.png" alt="Іконка" style="width: 20px; height: 20px;">
+                Про нашу компанию
+            </a>
+            <!-- Модальное окно -->
+            <div id="videoModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <video id="videoPlayer" controls autoplay>
+                        <source src="{{ url_for('static', filename='video.mp4') }}" type="video/mp4">
+                        Ваш браузер не поддерживает видео.
+                    </video>
+                </div>
+            </div>  
+        </div>
+</div>
+
+
+
+<div class="reviews-section" style="border-radius: 30px; background-color: rgba(230, 245, 255, 0.5);">
+    <div class="reviews-title-container">
+        <div class="reviews-title">Отзывы наших клиентов</div>
+    </div>
+    
+    <div class="swiper-container">
+        <!-- Навигационные стрелки над видео -->
+        <div class="swiper-buttons">
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+        <div class="swiper-wrapper">
+            {% for row in rows[0] %}
+            <div class="swiper-slide">
+                <div class="video-youtube fade-in">
+                    <iframe src="{{ row[2] }}" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<div class="fade-in"><p class="fade-in" style="text-align: center; margin-top: 30px; margin-bottom: 30px; font-size: x-large; margin-left: 10%; margin-right: 10%">
+    Aspor Logistic – это всего лишь одно из направлений деятельности нашей компании. У Вас есть уникальная возможность не только доставить готовые товары из Китая в Украину с нашей помощью, но и СОЗДАТЬ СВОЙ ПРОДУКТ на действующем производстве под нашим брендом. Не нужно начинать все с нуля. Наш многолетний опыт и понимание механизмов китайского рынка дадут быстрый старт Вашей идее. Увеличить прибыль, привлечь поддержку надежного партнера на мировом рынке, воплотить свою мечту. Доверие, поддержка, качество – главные критерии Aspor Украина.
+</p>
+</div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="special-heading text-center">
+                <h1 class="section_header">
+                    <span style="margin-top: 40px" class="regular">
+                        Наши преимущества
+                    </span>
+                </h1>
+            </div>
+        </div>
+        <div class="row fade-in">
+            <div class="col-md-6" style="border-radius: 30px; background-color: rgba(230, 245, 255, 0.5);">
+                <div class="why" style="margin-top: 20px">
+                    <div class="why_inner">
+                        <a class="why_col">
+                            <div class="why_col__img">
+                                <img class="lazy-load" src="{{ url_for('static', filename='autonomous.png') }}" alt="text-icons">
+                            </div>
+                            <div class="why_col__content">
+                                <div class="why_col__name" style="font-size: x-large"><strong>Собственное производство в Китае</strong></div>
+                                <div class="why_col__name">Что может быть важнее надежного партнёрства в бизнесе? Мы готовы стать Вашей опорой в создании желаемого товара. С 2015 года наша фабрика производит качественную электронику китайского производителя ASPOR. На сегодня масштабы компании - 10 торговых точек по Украине  с номенклатурой свыше 2000 единиц. Наращиваем темпы и увеличиваем ассортимент, мы открыты Вашим мечтам и опираясь на опыт готовы внедрить Вашу идею в жизнь.</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="why">
+                    <div class="why_inner">
+                        <a class="why_col why_col__reverse">
+                            <div class="why_col__img">
+                                <img class="lazy-load" src="{{ url_for('static', filename='help-desk.png') }}" alt="text-icons">
+                            </div>
+                            <div class="why_col__content">
+                                <div class="why_col__name" style="font-size: x-large";><strong>Полное сопровождение заказа с учетом индивидуальных пожеланий</strong></div>
+                                <div class="why_col__name">Aspor Logistic – это комплексный подход к заказу клиента с применением всего спектра услуг от Aspor Украина. Мы поможем в решении Вашего вопроса на любом этапе. Будь то просто доставка или полный цикл организации создания и транспортировки необходимого товара сообщением Китай-Украина.</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="why">
+                    <div class="why_inner">
+                        <a class="why_col">
+                            <div class="why_col__img">
+                                <img class="lazy-load" src="{{ url_for('static', filename='magnifier.png') }}" alt="text-icons">
+                            </div>
+                            <div class="why_col__content">
+                                <div class="why_col__name" style="font-size: x-large;"><strong>Поиск товаров и проверка качества на производстве в Китае</strong></div>
+                                <div class="why_col__name">Наша украинско-китайская команда обеспечивает автоматизацию всех процессов от создания до транспортировки в обеих странах. Каждый сотрудник компетентен в своей области. Мы предоставляем дополнительную возможность проверки приобретенного Вами товара в Китае. Можем обеспечить дистанционный поиск необходимой продукции по Вашему запросу.</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="why">
+                    <div class="why_inner">
+                        <a class="why_col why_col__reverse">
+                            <div class="why_col__img">
+                                <img class="lazy-load" src="{{ url_for('static', filename='guarantee.png') }}" alt="text-icons">
+                            </div>
+                            <div class="why_col__content">
+                                <div class="why_col__name" style="font-size: x-large;"><strong>Гарантированная целостность товара при транспортировке</strong></div>
+                                <div class="why_col__name">Эффективное обеспечение организации движения Вашего товара – главная цель Aspor Logistic. Ответственность перед клиентом за результат несет каждый сотрудник, и компания работает как слаженный механизм</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="why">
+                    <div class="why_inner">
+                        <a class="why_col">
+                            <div class="why_col__img">
+                                <img class="lazy-load" src="{{ url_for('static', filename='chatbot.png') }}" alt="text-icons">
+                            </div>
+                            <div class="why_col__content">
+                                <div class="why_col__name" style="font-size: x-large"><strong>Удобное отслеживание статуса груза в Telegram Bot</strong></div>
+                                <button class="tgbutt" onclick="redirectToTelegram()">TELEGRAM BOT</button>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="why">
+                    <div class="why_inner">
+                        <a class="why_col why_col__reverse">
+                            <div class="why_col__img">
+                                <img class="lazy-load" src="{{ url_for('static', filename='shipping.png') }}" alt="text-icons">
+                            </div>
+                            <div class="why_col__content">
+                                <div class="why_col__name" style="font-size: x-large;"><strong>Еженедельный выход судна из порта</strong></div>
+                                <div class="why_col__name">Показателем стабильности и перспективы долгосрочного взаимодействия в направлении логистики морем является регулярность рейсов судов. Наши судна загружаются каждую неделю, и Вы точно будете уверены, что Ваш товар будет доставлен в оговоренный срок.</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-container">
+            <div class="info-block" style="display: flex; align-items: flex-start;">
+                <img src="/static/img/calc.jpg" alt="Розрахунок вартості" style="max-width: 100px; margin-right: 30px;border-radius: 50px">
+                <div>
+                <h1>РАССЧИТАЕМ <br> СТОИМОСТЬ<br> ПЕРЕВОЗКИ</h1>
+                <p>✔️ Разработаем оптимальный маршрут</p> 
+                <p>✔️ Подберем самый выгодный тариф</p>
+                <p>✔️ Организуем быструю и безопасную доставку груза</p>
+            </div>    
+                    
+            <div class="form-block">
+                <form id="form-block-form">
+                    <div class="form-group">
+                        <label for="form-category">Категория товара</label>
+                        <select class="form-control" id="form-category" name="form-category">
+                            <option value="Електротовари" selected="selected">Электротовары, мобильные аксесуары</option>
+                            <option value="Обладнання">Оборудование, станки</option>
+                            <option value="Текстиль">Текстиль, обувь</option>
+                            <option value="Авто / вело">Авто / вело / мото запчасти</option>
+                            <option value="Товари госп. признач.">Товары хозяйственного призначения</option>
+                            <option value="Тканини">Ткани</option>
+                            <option value="Інше">Другое</option>
+                        </select>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="form-message">Вес и объем (с запаковкой)</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="kg-input" name="kg-input" placeholder="кг" style="max-width: 100px;">
+                            <div class="input-group-append">
+                                <span class="input-group-text" id="divider">/</span>
+                            </div>
+                            <input type="text" class="form-control" id="m3-input" name="m3-input" placeholder="м³" style="max-width: 100px;">
+                        </div>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="form-phone">Телефон</label>
+                        <input type="tel" class="form-control" id="form-phone" name="form-phone" inputmode="tel" placeholder="+380"
+                        autocomplete="tel" pattern="\+380[0-9]{9}">
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="form-email">Email</label>
+                        <input type="email" class="form-control" id="form-email" name="form-email" placeholder="mailname@mail.com">
+                    </div>
+        
+                    <div class="form-group">
+                        <button type="button" class="btn btn-primary" onclick="submitForm1()">Отправить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+        <div class="container1">
+            <div class="partner-section">
+                <div class="trust-block">
+                    <img src="/static/img/partner.jpg" alt="Партнеры" class="partner-logo">
+                    <span>Наші партнери нам довіряють</span>
+                </div>
+                
+                <div class="logo-block">
+                    <div class="logo-container">
+                        <div class="logo-item"><img src="/static/logo/mobile.png" alt="Логотип 1"></div>
+                                <div class="logo-item"><img src="/static/logo/4you.png" alt="Логотип 2"></div>
+                                <div class="logo-item"><img src="/static/logo/logo_opti2.png" alt="Логотип 3"></div>
+                                <div class="logo-item"><img src="/static/logo/avantis.jpg" alt="Логотип 4"></div>
+                                <div class="logo-item"><img src="/static/logo/mo.png" alt="Логотип 5"></div>
+                                <div class="logo-item"><img src="/static/logo/new.png" alt="Логотип 6"></div>
+                                <div class="logo-item"><img src="/static/logo/mobydick.png" alt="Логотип 7"></div>
+                                <div class="logo-item"><img src="/static/logo/1.jpg" alt="Логотип 8"></div>
+                                <div class="logo-item"><img src="/static/logo/aspor.jpg" alt="Логотип 9"></div>
+                                <div class="logo-item"><img src="" alt="Логотип 10"></div>
+                                <div class="logo-item"><img src="/static/logo/new.png" alt="Логотип 6"></div>
+                                <div class="logo-item"><img src="/static/logo/mobydick.png" alt="Логотип 7"></div>
+                                <div class="logo-item"><img src="/static/logo/1.jpg" alt="Логотип 8"></div>
+                                <div class="logo-item"><img src="/static/logo/aspor.jpg" alt="Логотип 9"></div>
+                                <div class="logo-item"><img src="" alt="Логотип 10"></div>
+                        <!-- Добавьте больше логотипов, если необходимо -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Форма "Ответим на все ваши вопросы" -->
+        <div class="form-container" style="display: flex; gap: 20px; background: rgba(230, 245, 255, 0.5); border-radius: 30px; padding: 20px;">
+            <!-- Левый блок -->
+            <div style="flex: 1;">
+                <!-- Картинка и заголовок -->
+                <div class="info-block" style="display: flex; align-items: flex-start; gap: 10px; background: rgba(230, 245, 255, 0.5);">
+                    <img src="/static/img/icontel.png" alt="Ваше изображение" class="info-image">
+                    <div class="info-text">
+                        <h3 >Ответим на все ваши вопросы</h3>
+                    </div>
+                </div>
+                <!-- Блок с галочками -->
+                <div class="info-block" style="margin-top: 10px; background: rgba(230, 245, 255, 0.5);">
+                    <div class="info-text">
+                        <p>✔️ Проконсультируем по всем вопросам</p>
+                        <p>✔️ Предоставим детальную информацию</p>
+                        <p>✔️ Поможем выбрать лучшее решение</p>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Правый блок с формой -->
+            <div class="form-block-contact" style="flex: 1;">
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Имя <span class="required">*</span></label>
+                        <input type="text" id="name" name="name" class="form-control" placeholder="Ваше Имя" required>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="phone">Номер телефона <span class="required">*</span></label>
+                        <input type="tel" id="phone" name="phone" class="form-control" placeholder="Ваш номер телефона" required>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="message">Ваш вопрос</label>
+                        <textarea id="message" name="message" class="form-control" placeholder="Ваш вопрос" rows="4"></textarea>
+                    </div>
+        
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary" onclick="submitContactForm()">Отправить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        
+    </div>
+
+    <div class="container">
+        <div class="home-consultation__row">
+            <div class="home-consultation__img aos-init aos-animate" data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-in-out">
+                <img src="/common-inc/img/wartime-logistics/ukraine.png" alt="">
+            </div>
+        </div>
+    </div>
+    <script>
+        function redirectToTelegram() {
+            window.location.href = "{{rows[1]}}";
+        }
+
+    </script>
+{% endblock %}
